@@ -21,11 +21,15 @@ export class GifsService {
     this._tagsHistory = this._tagsHistory.splice(0, 9);
   }
 
-  public searchTag(tag: string): void {
+  async searchTag(tag: string): Promise<void> {
     if (tag.length === 0) return;
 
     tag = tag.toLowerCase();
     this.organizeHistory(tag);
+
+    fetch('https://api.giphy.com/v1/gifs/search?api_key=uwiy2NxdVdsk3m5DGWgvUCIXNKxVCBf3&q=star trek&limit=10')
+      .then(res => res.json())
+      .then(data => console.log(data))
 
     this._tagsHistory.unshift(tag);
   }
