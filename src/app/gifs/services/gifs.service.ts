@@ -38,8 +38,7 @@ export class GifsService {
     // Returns an observable
     this.http.get(`${this.serviceUrl}/search`, {params})
       .subscribe(resp => {
-        console.log(resp);
-        
+        console.log(resp);        
       });
 
     this._tagsHistory.unshift(tag);
