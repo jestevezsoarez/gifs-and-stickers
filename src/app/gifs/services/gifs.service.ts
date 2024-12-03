@@ -12,7 +12,8 @@ export class GifsService {
   public limit: string = '10';
   public gifList: Gif[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   get tagsHistory() {
     return [...this._tagsHistory];
@@ -45,7 +46,7 @@ export class GifsService {
       });
 
     this._tagsHistory.unshift(tag);
-    
+    localStorage.setItem("gifs", this._tagsHistory.toString());
   }
 
 }
