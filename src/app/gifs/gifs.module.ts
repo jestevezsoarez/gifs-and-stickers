@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SearchComponent } from './components/search/search.component';
 import { CardListComponent } from './components/card-list/card-list.component';
-import { GifsCardComponent } from './components/gifs-card/gifs-card.component';
+import { CardComponent } from './components/card/card.component';
 
 
 
@@ -12,7 +12,7 @@ import { GifsCardComponent } from './components/gifs-card/gifs-card.component';
     HomePageComponent,
     SearchComponent,
     CardListComponent,
-    GifsCardComponent
+    CardComponent
   ],
   imports: [
     CommonModule
