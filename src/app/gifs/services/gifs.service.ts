@@ -55,8 +55,7 @@ export class GifsService {
     // Returns an observable
     this.http.get<SearchResponse>(`${this.serviceUrl}/search`, {params})
       .subscribe(resp => {
-        this.gifList = resp.data;       
-        console.log(this.gifList);
+        this.gifList = resp.data;
       });
 
     this._tagsHistory.unshift(tag);
